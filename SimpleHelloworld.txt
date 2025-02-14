@@ -10,7 +10,7 @@ _start:
 movl $4, %eax     #write syscall that will output to the terminal
 movl $1, %ebx     #specify to output/STDOUT
 movl $Hello, %ecx #move the string to the register 
-movl $endi, %edx  # the length of the string 
+movl len, %edx  # the length of the string 
 int $SYSCALL      #call out to switch from user mode to the kernel to execute the system call
 
 
